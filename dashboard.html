@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        line-height: 1.6;
+        background: #f9f9f9;
+        color: #333;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #222;
+        color: white;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .hero {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: white;
+        text-align: center;
+        padding: 5rem 2rem;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: white;
+        color: #2575fc;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+
+      .about,
+      .features,
+      .cta {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: white;
+      }
+
+      .features-grid {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .feature-item {
+        background: #f0f0f0;
+        padding: 1.5rem;
+        border-radius: 10px;
+        flex: 1 1 250px;
+      }
+
+      .cta {
+        background: #2575fc;
+        color: white;
+      }
+
+      .footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Your Dashboard</h1>
+
+      <header class="hero">
+        <nav class="navbar">
+          <div class="logo">MyWebsite</div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#cta">Get Started</a></li>
+          </ul>
+        </nav>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+        <div class="hero-content">
+          <h1>Welcome to My Website</h1>
+          <p>Your one-stop solution for amazing features and services.</p>
+          <a href="#cta" class="btn">Get Started</a>
+        </div>
+      </header>
+
+      <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+          We provide awesome solutions that help businesses grow and thrive. Our
+          team is dedicated to excellence and innovation.
+        </p>
+      </section>
+
+      <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <h3>Fast</h3>
+            <p>Our system is optimized for speed and performance.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Secure</h3>
+            <p>Security is our top priority with end-to-end encryption.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Reliable</h3>
+            <p>Built with reliability and uptime in mind.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="cta">
+        <h2>Start Your Journey Now</h2>
+        <p>Join hundreds of satisfied users who trust us daily.</p>
+        <a href="#" class="btn">Sign Up</a>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+      </footer>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    
+  </body>
+</html>
